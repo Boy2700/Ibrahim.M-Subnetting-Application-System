@@ -11,12 +11,21 @@
 <body>
     <div id="app">
         <header>
-            <h1>Subnetting Application</h1>
+            <h1>Subnetting Application System</h1>
         </header>
         <div id="input-block">
             <div class="input-row">
                 <label for="ip-address">IP Address:</label>
                 <input type="text" id="ip-address" placeholder="Enter IP Address (e.g., 192.168.1.1)">
+            </div>
+
+               <div class="input-row">
+                <div class="col-9">
+                    <input type="radio" name="class" id="any" value="any" checked><label for="any">Any</label>
+                    <input type="radio" name="class" id="a" value="a"><label for="a">A</label>
+                    <input type="radio" name="class" id="b" value="b"><label for="b">B</label>
+                    <input type="radio" name="class" id="c" value="c"><label for="c">C</label>
+                </div>
             </div>
             <div class="input-row">
                 <label for="subnet-mask">Subnet Mask:</label>
@@ -48,14 +57,7 @@
                     <option value="8">255.0.0.0 / 8</option>
                 </select>
             </div>
-            <div class="input-row">
-                <div class="col-9">
-                    <input type="radio" name="class" id="any" value="any" checked><label for="any">Any</label>
-                    <input type="radio" name="class" id="a" value="a"><label for="a">A</label>
-                    <input type="radio" name="class" id="b" value="b"><label for="b">B</label>
-                    <input type="radio" name="class" id="c" value="c"><label for="c">C</label>
-                </div>
-            </div>
+         
             <div class="input-row">
                 <button onclick="calculateSubnet()">Calculate</button>
             </div>
@@ -64,7 +66,7 @@
             <!-- Results will be dynamically inserted here -->
         </div>
         <footer>
-            <p>&copy; 2024 Subnetting Application</p>
+            <p>Allrignt reserved &copy; 2024 Subnetting Application system || Ibrahim Mohammed</p>
         </footer>
     </div>
     <script src="app.js"></script>
