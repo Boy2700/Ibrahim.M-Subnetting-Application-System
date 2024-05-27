@@ -34,10 +34,11 @@
             var username = document.getElementById('username').value;
             var password = document.getElementById('password').value;
             if (!username || !password) {
-                alert('Remember to input your login details!');
+                alert("You didn't input your login Details, Remember to input your login details!");
                 return false;
             }
             if (username === 'ibrahim' && password === 'ibrahim') {
+                alert("Login Succesful!")
                 window.location.href = './Subnet/home.html';
             } else {
                 alert('Invalid username or Password Recheck!');
