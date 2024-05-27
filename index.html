@@ -1,75 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subnetting Application</title>
-    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <title>Subnetting Application System</title>
+    <link rel="stylesheet" href="s.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 </head>
 
 <body>
-    <div id="app">
-        <header>
-            <h1>Subnetting Application System</h1>
-        </header>
-        <div id="input-block">
-            <div class="input-row">
-                <label for="ip-address">IP Address:</label>
-                <input type="text" id="ip-address" placeholder="Enter IP Address (e.g., 192.168.1.1)">
-            </div>
+    <center>
+        <h1>Subnetting Application System</h1>
 
-               <div class="input-row">
-                <div class="col-9">
-                    <input type="radio" name="class" id="any" value="any" checked><label for="any">Any</label>
-                    <input type="radio" name="class" id="a" value="a"><label for="a">A</label>
-                    <input type="radio" name="class" id="b" value="b"><label for="b">B</label>
-                    <input type="radio" name="class" id="c" value="c"><label for="c">C</label>
-                </div>
-            </div>
-            <div class="input-row">
-                <label for="subnet-mask">Subnet Mask:</label>
-                <select id="subnet-mask">
-                    <option value="32">255.255.255.255 / 32</option>
-                    <option value="31">255.255.255.254 / 31</option>
-                    <option value="30">255.255.255.252 / 30</option>
-                    <option value="29">255.255.255.248 / 29</option>
-                    <option value="28">255.255.255.240 / 28</option>
-                    <option value="27">255.255.255.224 / 27</option>
-                    <option value="26">255.255.255.192 / 26</option>
-                    <option value="25">255.255.255.128 / 25</option>
-                    <option value="24">255.255.255.0 / 24</option>
-                    <option value="23">255.255.254.0 / 23</option>
-                    <option value="22">255.255.252.0 / 22</option>
-                    <option value="21">255.255.248.0 / 21</option>
-                    <option value="20">255.255.240.0 / 20</option>
-                    <option value="19">255.255.224.0 / 19</option>
-                    <option value="18">255.255.192.0 / 18</option>
-                    <option value="17">255.255.128.0 / 17</option>
-                    <option value="16">255.255.0.0 / 16</option>
-                    <option value="15">255.254.0.0 / 15</option>
-                    <option value="14">255.252.0.0 / 14</option>
-                    <option value="13">255.248.0.0 / 13</option>
-                    <option value="12">255.240.0.0 / 12</option>
-                    <option value="11">255.224.0.0 / 11</option>
-                    <option value="10">255.192.0.0 / 10</option>
-                    <option value="9">255.128.0.0 / 9</option>
-                    <option value="8">255.0.0.0 / 8</option>
-                </select>
-            </div>
-         
-            <div class="input-row">
-                <button onclick="calculateSubnet()">Calculate</button>
-            </div>
-        </div>
-        <div id="result">
-            <!-- Results will be dynamically inserted here -->
-        </div>
-        <footer>
-            <p>Allrignt reserved &copy; 2024 Subnetting Application system || Ibrahim Mohammed</p>
-        </footer>
-    </div>
-    <script src="app.js"></script>
+
+        <p class="sign" align="center">User Login Page</p>
+        <form class="form1" onsubmit="return authenticate(event)">
+            <input class="un" type="text" id="username" align="center" placeholder="Username">
+            <input class="pass" type="password" id="password" align="center" placeholder="Password">
+            <center> <button type="submit" class="submit" align="center">Login in</button></center>
+        </form>
+    </center>
+    <footer class="mt-auto bg-light text-center py-3">
+        <p class="mb-0">All rights reserved &copy; 2024 Subnetting Application System || Ibrahim Mohammed</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        function authenticate(event) {
+            event.preventDefault();
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            if (!username || !password) {
+                alert('Remember to input your login details!');
+                return false;
+            }
+            if (username === 'ibrahim' && password === 'ibrahim') {
+                window.location.href = './Subnet/home.html';
+            } else {
+                alert('Invalid username or Password Recheck!');
+                return false;
+            }
+        }
+    </script>
 </body>
 
 </html>
